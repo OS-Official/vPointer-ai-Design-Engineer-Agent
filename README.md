@@ -1,4 +1,5 @@
 
+
 <img width="64" height="64" alt="Group 40" src="https://github.com/user-attachments/assets/134b42d4-f076-4214-9a17-7221f8b134fd" />
 
 
@@ -11,6 +12,7 @@ One lead agent and eight specialists cover brand systems, Figma, front-end code,
 
 Runs on macOS, Linux and Windows (Windows untested so far; it needs [Git for Windows](https://git-scm.com/download/win)).
 
+<img width="2880" height="1800" alt="readme-light" src="https://github.com/user-attachments/assets/0500c046-31de-43d5-8107-224a98cb01c9" />
 
 
 ## Installation
