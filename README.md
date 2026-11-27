@@ -2,13 +2,12 @@
 
 **Your design-engineering team, on your own computer.** AI specialists that know your brand, build mobile first, and check their own work, in a chat window or the terminal, on Claude or a free local model.
 
-One lead agent and eight specialists cover brand systems, Figma, front-end code, Arabic MSA copy, accessibility, security and deployment. It follows your brand packs exactly, connects to apps over MCP, and checks every action before it runs. Built on the [Claude Agent SDK](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk) (JavaScript).
+One lead agent and eight specialists cover brand systems, Figma, front-end code, Arabic MSA copy, accessibility, security and deployment. It follows your brand packs exactly, connects to apps over MCP, and checks every action before it runs. 
 
-Designed and built by **Sizan Suleiman**.
 
 Runs on macOS, Linux and Windows (Windows untested so far; it needs [Git for Windows](https://git-scm.com/download/win)).
 
-## Install
+## Installation
 
 ```bash
 git clone https://github.com/OS-Official/vPointer-ai-Design-Engineer-Agent.git
