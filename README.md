@@ -1,6 +1,6 @@
 # vPointer ai, Design Engineer Agent (Beta)
 
-**Your design-engineering team, on your own computer.** AI specialists that know your brand, build mobile first, and check their own work, in a chat window or the terminal, on Claude or a free local model.
+**Your design-engineering team, on your own computer.** AI specialists that know your brand, build mobile first, and check their own work, in a chat window or the terminal, on Claude or a free local model for maximum security.
 
 One lead agent and eight specialists cover brand systems, Figma, front-end code, Arabic MSA copy, accessibility, security and deployment. It follows your brand packs exactly, connects to apps over MCP, and checks every action before it runs. 
 
