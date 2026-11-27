@@ -1,4 +1,4 @@
-# dea: Design Engineer Agent
+# vPointer ai, Design Engineer Agent (Beta)
 
 **Your design-engineering team, on your own computer.** AI specialists that know your brand, build mobile first, and check their own work, in a chat window or the terminal, on Claude or a free local model.
 
@@ -226,13 +226,3 @@ ui/logos/          official app logos for the Apps list (sources and licences in
 ## Contributing
 
 Issues and pull requests are welcome. Please run `npm test` (it should end with `fail 0`) and `npm run check` before opening a pull request, and keep changes to `src/security/` small and covered by tests. To report a security problem privately, see [SECURITY.md](SECURITY.md).
-
-## Licence
-
-Apache License 2.0: see [LICENSE](LICENSE) and [NOTICE](NOTICE).
-
-This project's licence covers its own code only. It depends on software under other terms:
-- **[@anthropic-ai/claude-agent-sdk](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk)** is not open source. It's © Anthropic PBC and used under [Anthropic's terms](https://code.claude.com/docs/en/legal-and-compliance). You install it yourself with `npm install`, and using it (and the Claude API) means accepting those terms.
-- Other npm dependencies, Ollama, the apps you connect (Figma, Playwright, GitHub, Supabase) and the models you run keep their own terms.
-
-"Claude" is a trademark of Anthropic. This is an independent project, not made or endorsed by Anthropic. The Northwind brand is fictional.
