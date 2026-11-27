@@ -1,0 +1,33 @@
+{
+  "default": { "provider": "anthropic", "model": "opus" },
+  "providers": {
+    "anthropic": {
+      "type": "anthropic",
+      "label": "Claude (Anthropic API)",
+      "apiKeyEnv": "ANTHROPIC_API_KEY",
+      "models": [
+        { "id": "opus", "label": "Claude Opus 5.5", "note": "best for complex work" },
+        { "id": "sonnet", "label": "Claude Sonnet 5.5", "note": "fast, lower cost" },
+        { "id": "haiku", "label": "Claude Haiku 5.5", "note": "fastest, lowest cost" }
+      ]
+    },
+    "ollama": {
+      "type": "ollama",
+      "label": "Ollama (local)",
+      "url": "http://localhost:11434",
+      "defaultModel": "qwen3-coder-32k:latest",
+      "maxOutputTokens": 4096
+    },
+    "other-api": {
+      "type": "anthropic-compatible",
+      "enabled": false,
+      "label": "Another API (example)",
+      "baseUrl": "https://REPLACE-with-the-provider's-Anthropic-compatible-URL",
+      "apiKeyEnv": "DEA_PROVIDER_OTHER_API_KEY",
+      "auth": "x-api-key",
+      "contextTokens": 128000,
+      "maxOutputTokens": 8192,
+      "models": [{ "id": "REPLACE-model-name", "label": "Model name" }]
+    }
+  }
+}

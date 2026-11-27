@@ -1,0 +1,58 @@
+{
+  // vPointer ai: the engine is hidden and read-only in VS Code (and Cursor, Windsurf, VSCodium),
+  // so it isn't changed by accident. Everything you edit to build agents stays visible and editable:
+  //   agents/  tasks/  standards/  context/  src/tools/defs/  docs/  mcp.json  providers.json  .env
+  // This is a guard against slips, not a lock: see "Editing the engine" in the README to work on it.
+
+  // Hidden from the file tree and from search.
+  "files.exclude": {
+    "node_modules": true,
+    "logs": true,
+    "package-lock.json": true,
+    "ui": true,
+    "test": true,
+    "evals": true,
+    "src/bootstrap.js": true,
+    "src/check.js": true,
+    "src/config.js": true,
+    "src/index.js": true,
+    "src/providers.js": true,
+    "src/scaffold.js": true,
+    "src/brands": true,
+    "src/engine": true,
+    "src/lint": true,
+    "src/loaders": true,
+    "src/logging": true,
+    "src/mcp": true,
+    "src/prompts": true,
+    "src/security": true,
+    "src/server": true,
+    "src/tools/lib.js": true,
+    "src/tools/registry.js": true
+  },
+
+  // Read-only even when opened another way (a link, an error message, Go to Definition).
+  "files.readonlyInclude": {
+    "node_modules/**": true,
+    "logs/**": true,
+    "package-lock.json": true,
+    "package.json": true,
+    "LICENSE": true,
+    "NOTICE": true,
+    "SECURITY.md": true,
+    "ui/**": true,
+    "test/**": true,
+    "evals/**": true,
+    "src/*.js": true,
+    "src/brands/**": true,
+    "src/engine/**": true,
+    "src/lint/**": true,
+    "src/loaders/**": true,
+    "src/logging/**": true,
+    "src/mcp/**": true,
+    "src/prompts/**": true,
+    "src/security/**": true,
+    "src/server/**": true,
+    "src/tools/*.js": true
+  }
+}

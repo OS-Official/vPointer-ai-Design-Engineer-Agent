@@ -1,0 +1,18 @@
+dea (Design Engineer Agent)
+Copyright 2026 Sizan Suleiman
+
+Designed and built by Sizan Suleiman. Licensed under the Apache License,
+Version 2.0 (see LICENSE).
+
+This product depends on, but does not include, the Claude Agent SDK
+(@anthropic-ai/claude-agent-sdk), (c) Anthropic PBC, which is provided under
+Anthropic's own terms and is not covered by this licence.
+
+App logos in ui/logos/ (shown in the window's Apps list):
+- figma.svg, playwright.svg, supabase.svg: from Devicon 2.18.0
+  (https://github.com/devicons/devicon), (c) 2015 konpa, MIT License
+  (see ui/logos/LICENSE-devicon.txt).
+- github.svg: from Simple Icons 16.38.1 (https://simpleicons.org), CC0 1.0.
+Figma, Playwright, GitHub and Supabase names and logos are trademarks of their
+respective owners. They are used only to identify those apps; this project is
+not affiliated with or endorsed by them.

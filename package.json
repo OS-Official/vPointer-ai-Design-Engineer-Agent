@@ -1,0 +1,49 @@
+{
+  "name": "design-engineer-agent",
+  "version": "6.0.0",
+  "description": "Design Engineer Agent: AI specialists that know your brand, build mobile first and check their own work. Built on the Claude Agent SDK.",
+  "license": "Apache-2.0",
+  "author": "Sizan Suleiman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OS-Official/vPointer-ai-Design-Engineer-Agent.git"
+  },
+  "homepage": "https://github.com/OS-Official/vPointer-ai-Design-Engineer-Agent#readme",
+  "bugs": {
+    "url": "https://github.com/OS-Official/vPointer-ai-Design-Engineer-Agent/issues"
+  },
+  "keywords": [
+    "agent",
+    "design-engineering",
+    "claude-agent-sdk",
+    "mcp",
+    "ollama",
+    "design-system",
+    "tailwind",
+    "accessibility",
+    "rtl"
+  ],
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "dea": "src/index.js",
+    "dea-ui": "src/server/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "ui": "node src/server/index.js",
+    "careful": "node src/index.js --careful",
+    "check": "node src/check.js",
+    "new": "node src/scaffold.js",
+    "mcp:import": "node src/mcp/import.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.12"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.330",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.0.0"
+  }
+}

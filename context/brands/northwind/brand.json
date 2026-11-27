@@ -1,0 +1,49 @@
+{
+  "name": "Northwind",
+  "slug": "northwind",
+  "tokensVersion": 1,
+  "source": {
+    "designSystem": "Fictional example brand (replace with a link to your design system)",
+    "importedAt": "2026-11-26",
+    "note": "tokens.json, README.md and components.md are the design system's own files. Change the system first, then re-import; don't edit the copies here."
+  },
+  "rules": {
+    "forbidJustify": true,
+    "extraAlphas": [0.72, 0],
+    "notes": "forbidJustify: README rule 5. extraAlphas: the photo scrim, night 72% to 0%."
+  },
+  "icon": {
+    "grid": 24,
+    "strokeWidth": 2,
+    "linecap": "round",
+    "linejoin": "round",
+    "fill": "none",
+    "colours": ["fjord", "ink", "paper"],
+    "notes": "24-unit grid, 2 stroke, round caps and joins, no fills; fjord or ink on light grounds, paper on dark."
+  },
+  "web": {
+    "typeScale": {
+      "hero": { "minPx": 56, "maxPx": 112, "weight": 700 },
+      "title": { "minPx": 36, "maxPx": 56, "weight": 700 },
+      "subtitle": { "px": 22, "weight": 500 },
+      "lead": { "minPx": 18, "maxPx": 20, "weight": 500 },
+      "body": { "px": 16, "lineHeightPx": 26, "weight": 400 },
+      "small": { "px": 14, "weight": 400 },
+      "caption": { "px": 12, "weight": 500, "letterSpacing": "0.04em" },
+      "body-ar": { "px": 18, "lineHeightPx": 31, "weight": 400 }
+    },
+    "notes": "Sizes in px; brand_css turns fluid ranges into clamp() between 375 and 1440px viewports.",
+    "layout": {
+      "status": "approved",
+      "notes": "Web layout of the example brand. Your own brand can mark values \"proposed\" until they are signed off.",
+      "columns": { "base": 4, "md": 8, "lg": 12 },
+      "pageMargin": { "minPx": 20, "maxPx": 80 },
+      "gutter": { "minPx": 16, "maxPx": 48 },
+      "sectionSpace": { "minPx": 48, "maxPx": 96 },
+      "containerMaxPx": 1280,
+      "measureCh": 68,
+      "spacing": { "space-1": 4, "space-2": 8, "space-3": 12, "space-4": 24, "space-5": 48 },
+      "sizes": { "icon-tile": 48, "icon": 24, "button": 48, "key-rule": 2, "row-line": 1 }
+    }
+  }
+}

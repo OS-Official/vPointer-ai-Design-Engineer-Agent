@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: arabic-page-fix
+expected_outcome: |
+  index.html and styles.css fixed in place (mobile-first, logical properties for RTL, zoom allowed, visible focus, images with alt and size, no 100vh) plus review.md explaining each problem; no example-brand tokens or fonts introduced.
+context:
+  scaffold_script: place-files.sh

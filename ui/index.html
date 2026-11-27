@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#faf8f6">
+  <title>vPointer ai – Design engineer agent</title>
+  <link rel="icon" href="/icon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#composer-input">Skip to message box</a>
+  <div class="app" id="app" data-sidebar="closed">
+    <aside class="sidebar" id="sidebar" aria-label="Chats">
+      <div class="sidebar-top">
+        <div class="brand">
+          <span class="wordmark"><img class="icon-light" src="/icon-light.svg" alt="" width="24" height="24"><img class="icon-dark" src="/icon.svg" alt="" width="24" height="24"><span class="wordmark-text"><span class="brand-name">vPointer ai</span> <span class="brand-sub">Design engineer agent</span></span></span>
+        </div>
+        <button type="button" class="icon-btn only-mobile" data-action="close-sidebar" aria-label="Close chats">
+          <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <button type="button" class="new-chat" data-action="new-chat">
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M9 4H5.5A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16h9a1.5 1.5 0 0 0 1.5-1.5V11" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M14.2 3.3l2.5 2.5L10 12.5l-3 .5.5-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        New chat
+      </button>
+      <button type="button" class="side-btn" data-action="open-apps">
+        <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path d="M6 2.5v3M10 2.5v3M4.5 5.5h7v2.5a3.5 3.5 0 0 1-7 0zM8 11.5v2" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Apps
+      </button>
+      <nav class="thread-list" id="thread-list" aria-label="Your chats"></nav>
+      <footer class="sidebar-foot">
+        <div class="foot-stack">
+          <div class="foot-appearance" id="sidebar-foot"></div>
+          <p class="credit">Designed by Sizan Suleiman</p>
+          <a class="gh-link" href="https://github.com/OS-Official/vPointer-ai-Design-Engineer-Agent" target="_blank" rel="noopener noreferrer" aria-label="vPointer ai on GitHub" title="vPointer ai on GitHub"><span class="app-logo is-mono logo-github" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </aside>
+    <div class="scrim" data-action="close-sidebar" hidden></div>
+
+    <main class="main" id="main">
+      <header class="topbar">
+        <button type="button" class="icon-btn only-mobile" data-action="open-sidebar" aria-label="Open chats" aria-controls="sidebar" aria-expanded="false">
+          <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3.5 6h13M3.5 10h13M3.5 14h13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="icon-btn only-docked side-toggle" data-action="toggle-sidebar" aria-label="Sidebar" aria-controls="sidebar" aria-expanded="true" title="Hide sidebar">
+          <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><rect x="2.75" y="3.75" width="14.5" height="12.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7.5 3.75v12.5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+        <div class="title-wrap" id="title-wrap"></div>
+        <button type="button" class="icon-btn live-toggle" data-action="toggle-live" aria-label="Live view" aria-controls="live" aria-expanded="false" title="Live view: what agents see and do in your apps">
+          <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><rect x="2.75" y="3.75" width="14.5" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 16.5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8.5 6.75l3.5 2-3.5 2z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="icon-btn" data-action="toggle-panel" aria-label="Agents and tools" aria-controls="panel" aria-expanded="false" title="Agents and tools">
+          <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><rect x="2.75" y="3.75" width="14.5" height="12.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12.5 3.75v12.5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </button>
+      </header>
+
+      <section class="conversation" id="conversation" role="log" aria-live="off" aria-label="Conversation" tabindex="-1"></section>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <div class="approvals" id="approvals" aria-live="assertive"></div>
+        <div class="composer-box">
+          <label class="sr-only" for="composer-input">Message</label>
+          <ul class="suggest" id="suggest" role="listbox" aria-label="Tasks" hidden></ul>
+          <textarea id="composer-input" rows="1" placeholder="Ask your agents" aria-describedby="composer-hint" aria-autocomplete="list" aria-controls="suggest"></textarea>
+          <div class="composer-bar">
+            <div class="composer-left" id="composer-left"></div>
+            <button type="submit" class="send" id="send" aria-label="Send">
+              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M10 15.5v-11M5.5 9L10 4.5 14.5 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <p class="composer-hint" id="composer-hint" aria-live="off">Type / for a task. Enter sends, Shift-Enter adds a line<span class="only-wide">. Risky actions always ask you first</span>.</p>
+      </form>
+    </main>
+
+    <aside class="panel" id="panel" aria-label="Agents and tools" hidden></aside>
+    <aside class="panel live" id="live" aria-label="Live view" hidden></aside>
+  </div>
+
+  <div class="menu-layer" id="menu-layer"></div>
+  <p class="sr-only" id="announcer" role="status" aria-live="polite"></p>
+  <noscript><p class="noscript">vPointer ai needs JavaScript.</p></noscript>
+</body>
+</html>

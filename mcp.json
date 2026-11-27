@@ -1,0 +1,58 @@
+{
+  "mcpServers": {
+    "figma": {
+      "type": "http",
+      "url": "http://127.0.0.1:3845/mcp",
+      "dea": {
+        "enabled": true,
+        "description": "Figma desktop app (its MCP server): read frames, layer structure, variables, styles and screenshots from a Figma link or the current selection",
+        "setup": "Open the Figma desktop app and turn on its MCP server (Figma calls it the desktop or Dev Mode MCP server).",
+        "allow": ["get_*", "search_*", "whoami", "create_session", "create_design_system_rules"],
+        "deny": [],
+        "local": true,
+        "alwaysLoad": false
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.86", "--isolated"],
+      "dea": {
+        "enabled": false,
+        "description": "A real browser for checking pages: screenshots and accessibility snapshots at any screen size, console and network",
+        "setup": "Nothing to install: the first use downloads it with npx. Opening pages and clicking ask you first.",
+        "allow": ["browser_snapshot", "browser_take_screenshot", "browser_console_messages", "browser_network_requests", "browser_network_request", "browser_find", "browser_wait_for", "browser_resize", "browser_emulate_media", "browser_tabs", "browser_navigate_back", "browser_close"],
+        "deny": ["browser_run_code_unsafe", "browser_file_upload"],
+        "local": false,
+        "alwaysLoad": false
+      }
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": { "Authorization": "Bearer ${DEA_MCP_GITHUB_TOKEN}" },
+      "dea": {
+        "enabled": false,
+        "description": "GitHub: read repositories, files, issues and pull requests; anything that changes GitHub asks first",
+        "setup": "Create a GitHub token, add DEA_MCP_GITHUB_TOKEN=... to .env, then restart the window.",
+        "allow": ["get_*", "list_*", "search_*"],
+        "deny": ["delete_*"],
+        "local": false,
+        "alwaysLoad": false
+      }
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@0.20.0", "--read-only", "--project-ref=${DEA_MCP_SUPABASE_PROJECT_REF}"],
+      "env": { "SUPABASE_ACCESS_TOKEN": "${DEA_MCP_SUPABASE_TOKEN}" },
+      "dea": {
+        "enabled": false,
+        "description": "Supabase, read-only, for one project: tables, migrations, logs, advisors and docs",
+        "setup": "Add DEA_MCP_SUPABASE_TOKEN and DEA_MCP_SUPABASE_PROJECT_REF to .env, then restart the window. It runs read-only.",
+        "allow": ["list_*", "get_*", "search_docs", "generate_typescript_types"],
+        "deny": ["delete_*", "pause_project", "restore_project", "reset_branch"],
+        "local": false,
+        "alwaysLoad": false
+      }
+    }
+  }
+}
