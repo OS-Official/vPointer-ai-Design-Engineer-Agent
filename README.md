@@ -1,3 +1,4 @@
+<img width="128" height="128" alt="32@4x" src="https://github.com/user-attachments/assets/a5c9d1cb-c156-4f0c-9b1c-fd57c8dbffb5" />
 # vPointer ai, Design Engineer Agent (Beta)
 
 **Your design-engineering team, on your own computer.** AI specialists that know your brand, build mobile first, and check their own work, in a chat window or the terminal, on Claude or a free local model for maximum security.
